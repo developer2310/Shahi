@@ -1,0 +1,560 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+nav {
+    height: 30px;
+    position: fixed;
+    top: -20px;
+    left: 0;
+    box-sizing: border-box;
+    transition: .5s;
+    width: 100%;
+    z-index: 22;
+}
+
+nav.black {
+    background: #DC143C;
+    height: 80px;
+}
+
+nav.black .logo img {
+    height: 30px;
+}
+
+nav.black ul li a {
+    color: #fff !important;
+    line-height: 60px;
+}
+
+nav.black .logo span {
+    color: #fff;
+}
+
+nav .container {
+    width: calc(100vw - 195px);
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 230px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+a.active,
+a:hover {
+    color: #DC143C;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 90px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .checkbtn {
+        display: block;
+        margin-left: -90px;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        transition: all .5s ease;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a:active {
+        background: none;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .checkbtn {
+        display: block;
+        margin: 0 30px;
+    }
+
+    .logo {
+        display: block;
+        position: relative;
+        left: -100px;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #111111;
+        z-index: 999;
+        top: 80px;
+        left: -100%;
+        transition: all .5s ease;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a:active {
+        background: none;
+        color: #DC143C;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+
+    .boxth {
+        opacity: 0;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .checkbtn {
+        display: block;
+        margin: 0 20px;
+        font-size: 26px;
+        z-index: 999;
+        position: relative;
+    }
+
+    .logo {
+        display: block;
+        position: relative;
+        left: -110px;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #111111;
+        z-index: 998;
+        top: -16px;
+        left: -100%;
+        transition: all .5s ease;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a:active {
+        background: none;
+        color: #DC143C;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+
+    .boxt {
+        opacity: 0;
+    }
+}
+
+/* Header */
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #DC143C;
+}
+
+.home {
+    position: relative;
+    background-image: url("sup1\ \(2\).jpg");
+    background-size: calc(100vw) calc((100vh));
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-attachment: fixed;
+    top: 0px;
+    color: #fff;
+    font-weight: bold;
+    height: 850px;
+}
+
+.home h3 {
+    font-size: 36px;
+    line-height: 1;
+    margin-top: 270px;
+}
+
+.home h1 {
+    font-size: 72px;
+}
+
+.home p {
+    font-size: 38px;
+}
+
+.home button {
+    padding: 13px 35px;
+    letter-spacing: 1px;
+    font-size: 20px;
+    width: 165px;
+    transition: all .5s ease;
+}
+
+.btn-danger:hover {
+    background: transparent;
+    color: #DC143C;
+    border: 2px solid #DC143C;
+    font-size: 20px;
+    width: 165px;
+}
+
+/* Home EnD */
+
+/* About US */
+.about {
+    position: relative;
+    color: #fff;
+    font-weight: bold;
+}
+
+.about .container {
+    width: 75%;
+}
+
+.img img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    height: 400px;
+}
+
+.about__header-one {
+    font-size: 30px;
+    font-weight: 600;
+    color: #000;
+}
+
+.about__paragraph-one {
+    color: #000000;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+/* About End */
+
+/* Services */
+.services {
+    position: relative;
+    top: -48px;
+    background: #111;
+}
+
+.services .container {
+    width: 75%;
+}
+
+.services h1 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.services h2 span {
+    font-size: 20px;
+}
+
+.services .box_one {
+    width: 100%;
+    height: 100%;
+    background: #222;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.services .box_one:hover {
+    color: #fff;
+    background: #DC143C;
+}
+
+.services .box_one:hover i {
+    color: #fff !important;
+}
+
+/* Services EnD */
+
+
+/* Skills */
+
+.skills {
+    position: relative;
+    top: -95px;
+}
+
+.skills .container {
+    width: 75%;
+}
+
+.info span:last-child {
+    float: right;
+}
+
+.info span:first-child {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.line.html::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background: crimson;
+    top: 0;
+    width: 90%;
+    left: 0;
+}
+
+.line.html {
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+
+
+.line.css::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background: crimson;
+    top: 0;
+    width: 60%;
+    left: 0;
+}
+
+.line.css {
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+
+.line.js::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background: crimson;
+    top: 0;
+    width: 80%;
+    left: 0;
+}
+
+.line.js {
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+
+.line.php::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background: crimson;
+    top: 0;
+    width: 50%;
+    left: 0;
+}
+
+.line.php {
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+
+.line.mysql::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background: crimson;
+    top: 0;
+    width: 70%;
+    left: 0;
+}
+
+.line.mysql {
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+
+/* My skills */
+
+/* My Teams */
+
+.team {
+    background: #111111;
+    position: relative;
+    border: 5px solid pink;
+    top: 0;
+    left: 0;
+    /* width: 100%; */
+    height: 620px;
+}
+
+.team .container {
+    width: 75%;
+}
+
+.box_two {
+    width: 100%;
+    height: 200%;
+    background: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.box_two .img {
+    border: 5px solid crimson;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    position: relative;
+    top: -50px;
+    transform: scale(1);
+    transition: all .35s ease-out;
+}
+
+.box_two img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+.box_two h1 {
+    font-size: 25px;
+    font-weight: 500;
+    width: 300px;
+}
+
+.box_two p {
+    font-size: 16px;
+    font-weight: 400;
+    width: 200px;
+}
+
+.box_two:hover {
+    background: crimson;
+    transform: scale(1);
+    height: 200%;
+    overflow: hidden;
+    transition: all .35s ease-out;
+}
+
+.box_two:hover .img {
+    background: #fff;
+    transform: scale(1.1);
+}
+
+/* Teams End */
+
+
+/* Contact */
+.contact .container {
+    width: 75%;
+}
+
+/* Contact EnD */
+
+/* Footer */
+.footer {
+    position: relative;
+    top: 100px;
+    background: #111;
+    width: 100%;
+    height: 65px;
+}
+
+/* Footer End */
